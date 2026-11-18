@@ -1,0 +1,75 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hai!</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            overflow: hidden;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 320px;
+            width: 85%;
+        }
+        hss {
+            font-size: 24px;
+            color: #ff4757;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #57606f;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 25px;
+        }
+        button {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button:hover {
+            background-color: #ff6b81;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Hai, Teman! ✨</h2>
+        <p id="pesan">Makasih ya udah jadi teman yang baik dan seru diajak ngobrol. Tetap semangat ya jalani hari ini!</p>
+        <button onclick="gantiPesan()">Klik Ini</button>
+    </div>
+
+    <script>
+        function gantiPesan() {
+            const pesanList = [
+                "Semoga harimu menyenangkan ya! 😊",
+                "Jangan lupa makan dan istirahat yang cukup!",
+                "Kamu hebat, jangan patah semangat ya!",
+                "Tetap jadi teman yang asyik ya! 🌟"
+            ];
+            const randomPesan = pesanList[Math.floor(Math.random() * pesanList.length)];
+            document.getElementById("pesan").innerText = randomPesan;
+        }
+    </script>
+
+</body>
+</html>
